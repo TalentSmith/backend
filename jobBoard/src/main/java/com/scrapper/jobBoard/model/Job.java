@@ -8,7 +8,10 @@ import jakarta.persistence.Table;
 @Table(name="job_info")
 public class Job {
     @Id
-    private String job_id;
+    private int job_id;
+
+    private String job_req_id;
+
     private String job_title;
     private String job_url;
     private String job_location;
@@ -18,12 +21,20 @@ public class Job {
     public Job() {
     }
 
-    public String getJob_id() {
+    public int getJob_id() {
         return job_id;
     }
 
-    public void setJob_id(String job_id) {
+    public void setJob_id(int job_id) {
         this.job_id = job_id;
+    }
+
+    public String getJob_req_id() {
+        return job_req_id;
+    }
+
+    public void setJob_req_id(String job_req_id) {
+        this.job_req_id = job_req_id;
     }
 
     public String getJob_title() {
